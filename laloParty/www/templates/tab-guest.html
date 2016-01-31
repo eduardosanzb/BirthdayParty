@@ -1,0 +1,24 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+  <div class="item item-divider">
+    Yo!!!
+  </div>
+    <a class="item item-thumbnail-left mycard" href="#">
+      <img class="rounded" src="{{myself.image}}">
+      <h2>{{myself.name}}</h2>
+      <p>{{myself.team}}</p>
+    </a>
+    <div class="item item-divider">
+    Lista de Invitados
+    </div>
+    <div class="list" ng-repeat="user in users">
+
+      <a class="item item-thumbnail-left" href="#" ng-hide="user.$id == myId">
+        <img class="rounded" src="{{user.image}}">
+        <h2>{{user.name}}</h2>
+        <p>{{user.team}}</p>
+      </a>
+
+  </div>
+  </ion-content>
+</ion-view>
